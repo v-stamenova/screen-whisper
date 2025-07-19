@@ -3,3 +3,4 @@ mss
 pyautogui
 requests
 Pillow
+gnome-screenshot
