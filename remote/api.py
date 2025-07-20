@@ -40,7 +40,7 @@ async def ocr(request: OCRRequest):
             }
             headers = {"Content-Type": "application/json"}
 
-            resp = await client.post(LIBRETRANSLATE_URL,     data=json.dumps(payload), headers=headers)
+            resp = await client.post(LIBRETRANSLATE_URL, data=json.dumps(payload), headers=headers)
             resp.raise_for_status()
             translated = resp.json()
 
