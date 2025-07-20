@@ -1,4 +1,4 @@
-# ScreenText Translator
+# ScreenWhisper - ScreenText Translator
 
 A small pipeline that captures screen regions (like UI text in games such as The Sims), performs OCR via Tesseract, and translates the recognized text using LibreTranslate.
 
