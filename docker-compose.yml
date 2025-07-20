@@ -1,7 +1,0 @@
-services:
-  ocr-container:
-    container_name: ocr-container
-    build:
-      dockerfile: Dockerfile
-    volumes:
-        - .:/app

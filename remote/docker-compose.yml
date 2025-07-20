@@ -1,0 +1,17 @@
+services:
+  ocr_container:
+    container_name: ocr_container
+    build:
+      dockerfile: Dockerfile
+    volumes:
+        - .:/app
+    ports:
+        - 5000:5000
+    environment:
+      - NO_AT_BRIDGE=1
+    stdin_open: true
+    tty: true
+  libretranslate:
+    image: libretranslate/libretranslate
+    ports:
+        - 5010:5000
