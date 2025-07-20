@@ -39,7 +39,8 @@ def send_to_ocr(image):
 
     if response.ok:
         data = response.json()
-        print("OCR Text:", data.get("text", "<no text>"))
+        print("OCR Text:", data.get("originalText", "<no text>"))
+        print("Translated Text:", data.get("translatedText", "<no text>"))
     else:
         print("Error:", response.status_code, response.text)
 

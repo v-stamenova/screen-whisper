@@ -3,3 +3,5 @@ requests
 fastapi
 pydantic
 uvicorn
+dotenv
+httpx

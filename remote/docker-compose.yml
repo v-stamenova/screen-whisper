@@ -11,3 +11,7 @@ services:
       - NO_AT_BRIDGE=1
     stdin_open: true
     tty: true
+  libretranslate:
+    image: libretranslate/libretranslate
+    ports:
+        - 5010:5000
