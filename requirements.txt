@@ -1,5 +1,0 @@
-pytesseract
-mss
-pyautogui
-requests
-Pillow

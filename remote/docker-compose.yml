@@ -1,13 +1,13 @@
 services:
-  ocr-container-windows:
-    container_name: ocr-container-window
+  ocr_container:
+    container_name: ocr_container
     build:
       dockerfile: Dockerfile
     volumes:
         - .:/app
+    ports:
+        - 5000:5000
     environment:
-      - DISPLAY=host.docker.internal:0
-      - XAUTHORITY=/dev/null
       - NO_AT_BRIDGE=1
     stdin_open: true
     tty: true

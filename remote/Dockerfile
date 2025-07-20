@@ -8,7 +8,7 @@ WORKDIR /app
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip python3-tk gnome-screenshot && \
+    apt-get install -y python3 python3-pip && \
     apt-get clean
 
 COPY requirements.txt .
@@ -18,4 +18,4 @@ COPY . .
 
 ENTRYPOINT []
 
-CMD ["python3", "main.py"]
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "5000"]

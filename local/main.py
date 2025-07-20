@@ -3,14 +3,17 @@ import pyautogui
 from PIL import Image
 from dotenv import load_dotenv
 import os
+import io
+import base64
+import requests
 
 load_dotenv()
 OCR_TR_URL = os.getenv("OCR_TR_URL")
 
 def capture_mouse_area():
     x, y = pyautogui.position()
-    width = 300
-    height = 150
+    width = 500
+    height = 300
 
     region = {
         "left": x - int(width / 2),
@@ -22,7 +25,7 @@ def capture_mouse_area():
     print(f"Capturing at ({region['left']}, {region['top']})...")
     with mss.mss() as sct:
         img = sct.grab(region)
-        return img_pil = Image.frombytes("RGB", img.size, img.rgb)
+        return Image.frombytes("RGB", img.size, img.rgb)
 
 def send_to_ocr(image):
     buf = io.BytesIO()
