@@ -54,7 +54,7 @@ In the remote directory you can find the two containers that are used. One of th
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/translator.git
+git clone https://github.com/v-stamenova/screen-whisper.git
 cd translator
 ```
 
